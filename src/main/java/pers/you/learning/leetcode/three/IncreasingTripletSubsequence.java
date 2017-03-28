@@ -1,4 +1,5 @@
 /*
+网友实现：http://bookshadow.com/weblog/2016/02/16/leetcode-increasing-triplet-subsequence/
 LeetCode334:Increasing Triplet Subsequence
 Given an unsorted array return whether an increasing subsequence of length 3 exists or not in the array.
 
