@@ -20,7 +20,7 @@ import java.util.Set;
 
 public class NumberOfSegmentsInAString {
 
-    // 网友实现：https://leetcode.com/problems/number-of-segments-in-a-string/#/solutions
+    // 网友实现：https://discuss.leetcode.com/topic/70642/clean-java-solution-o-n
     public int countSegmentsV1(String s) {
         int res = 0;
         for (int i = 0; i < s.length(); i++) {
