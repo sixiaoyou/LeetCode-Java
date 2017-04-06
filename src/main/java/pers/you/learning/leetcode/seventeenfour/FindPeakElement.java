@@ -13,32 +13,25 @@ For example, in array [1, 2, 3, 1], 3 is a peak element and your function should
 
 package pers.you.learning.leetcode.seventeenfour;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class FindPeakElement {
 
-    public int findPeakElementV1(int[] nums) {
-        int a = 0;
-        if (nums.length == 1) {
-            return 0;
-        } else if (nums.length == 2) {
-            if (nums[0] > nums[1]) {
-                return 0;
-            } else {
-                return 1;
-            }
-        } else {
-            for (int i = 1; i < nums.length - 1; i++) {
-                if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) {
-                    a = i;
-                }
-            }
-            if (nums[nums.length - 1] > nums[nums.length - 2]) {
-                a = nums.length - 1;
-            }
+   
 
+    public int findPeakElementV1(int[] nums) {
+        int[] nums1=nums.clone();
+        int r=0;
+        Arrays.sort(nums);
+        for(int i=0;i<nums1.length;i++){
+            if(nums[i]==nums1[nums1.length-1]){
+                r=i;
+                break;
+            }
         }
-        return a;
+        return r;
     }
 
     // 网友实现：http://bookshadow.com/weblog/2014/12/06/leetcode-find-peak-element/
@@ -68,10 +61,35 @@ public class FindPeakElement {
         return mid;
     }
     
+    public int findPeakElementV3(int[] nums) {
+        int a = 0;
+        if (nums.length == 1) {
+            return 0;
+        } else if (nums.length == 2) {
+            if (nums[0] > nums[1]) {
+                return 0;
+            } else {
+                return 1;
+            }
+        } else {
+            for (int i = 1; i < nums.length - 1; i++) {
+                if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) {
+                    a = i;
+                }
+            }
+            if (nums[nums.length - 1] > nums[nums.length - 2]) {
+                a = nums.length - 1;
+            }
+
+        }
+        return a;
+    }
+    
 @Test
 public void test(){
             int[] nums={1,2,3,1};
             System.out.println(findPeakElementV1(nums));
             System.out.println(findPeakElementV2(nums));
+            System.out.println(findPeakElementV3(nums));
     }
 }
