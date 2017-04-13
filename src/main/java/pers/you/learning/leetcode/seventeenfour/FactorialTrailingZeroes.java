@@ -2,7 +2,7 @@ package pers.you.learning.leetcode.seventeenfour;
 
 public class FactorialTrailingZeroes {
     public int trailingZeroesV1(int n) {
-            int x=5;
+            long x=5;
             int sum=0;
             while(x<=n){
                 sum+=n/x;
