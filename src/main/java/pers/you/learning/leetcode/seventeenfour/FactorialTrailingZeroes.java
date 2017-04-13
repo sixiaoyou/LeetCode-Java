@@ -1,5 +1,14 @@
 package pers.you.learning.leetcode.seventeenfour;
 
+
+
+/*
+LeetCode 172: Factorial Trailing Zeroes
+Given an integer n, return the number of trailing zeroes in n!.
+
+Note: Your solution should be in logarithmic time complexity.
+ */
+
 public class FactorialTrailingZeroes {
     public int trailingZeroesV1(int n) {
             long x=5;
