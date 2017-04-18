@@ -60,6 +60,8 @@ public class AddBinary {
         }
     }
 
+    
+    //网友实现:https://discuss.leetcode.com/topic/13698/short-ac-solution-in-java-with-explanation
     public String addBinaryV2(String a, String b) {
         StringBuilder sb = new StringBuilder();
         int i = a.length() - 1, j = b.length() - 1, carry = 0;
