@@ -15,48 +15,63 @@ Subscribe to see which companies asked this question.
 package pers.you.learning.leetcode.seventeentwo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class TwoSumTwo {
-		public int[] twoSum(int[] numbers, int target) {
-		int sum=0;
-		int test=0;
-		int[] returnArray=new int[2];
-		List<Integer> list=new ArrayList<Integer>();
-		List<Integer>list1=new ArrayList<Integer>();
-		
-		Set set=new HashSet();
-		for(int i=0;i<numbers.length;i++){
-			list.add(numbers[i]);
-		}
-		set.addAll(list);
-	    list1.addAll(set);
-	    
-		for(int j:list1){
-			if(j==target/2&&target%2==0){
-				sum+=1;
-				test=j;
-				returnArray[0]=list.indexOf(test)+1;
-				returnArray[1]=list.indexOf(test)+2;
-				break;
-				}
-			else if(list1.contains(target-j)){
-				if(list.indexOf(j)<list.indexOf(target-j)){
-				    returnArray[0]=list.indexOf(j)+1;
-				    returnArray[1]=list.indexOf(target-j)+1;
-					
-			        break;
-				}
-				else{
-				    returnArray[0]=list.indexOf(target-j)+1;
-				    returnArray[1]=list.indexOf(j)+1;
-			        break;
-					}
-				}
-			}
-		return returnArray;
-		}
-}
+    public int[] twoSumTwoV1(int[] numbers, int target) {
+        int sum = 0;
+        int test = 0;
+        int[] returnArray = new int[2];
+        List<Integer> list = new ArrayList<Integer>();
+        List<Integer> list1 = new ArrayList<Integer>();
 
+        Set set = new HashSet();
+        for (int i = 0; i < numbers.length; i++) {
+            list.add(numbers[i]);
+        }
+        set.addAll(list);
+        list1.addAll(set);
+
+        for (int j : list1) {
+            if (j == target / 2 && target % 2 == 0) {
+                sum += 1;
+                test = j;
+                returnArray[0] = list.indexOf(test) + 1;
+                returnArray[1] = list.indexOf(test) + 2;
+                break;
+            } else if (list1.contains(target - j)) {
+                if (list.indexOf(j) < list.indexOf(target - j)) {
+                    returnArray[0] = list.indexOf(j) + 1;
+                    returnArray[1] = list.indexOf(target - j) + 1;
+
+                    break;
+                } else {
+                    returnArray[0] = list.indexOf(target - j) + 1;
+                    returnArray[1] = list.indexOf(j) + 1;
+                    break;
+                }
+            }
+        }
+        return returnArray;
+    }
+
+    public int[] twoSumTwoV2(int[] nums, int target) {
+        int i = 0, j = nums.length - 1;
+        int[] returnArray = new int[2];
+        while (i <= j) {
+            if (nums[i] + nums[j] == target) {
+                returnArray[0] = i + 1;
+                returnArray[1] = j + 1;
+                return returnArray;
+            } else if (nums[i] + nums[j] < target) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+        return returnArray;
+    }
+}

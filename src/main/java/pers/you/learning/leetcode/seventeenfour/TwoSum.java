@@ -1,7 +1,11 @@
 package pers.you.learning.leetcode.seventeenfour;
 
+import java.awt.Label;
+
+import org.junit.Test;
+
 /*
-LeetCode 1:Two Sum
+LeetCode 1Two Sum
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -16,17 +20,17 @@ return [0, 1].
 
 
 public class TwoSum {
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSumV1(int[] nums, int target) {
         int[] returnArray = new int[2];
         for(int i=0;i<nums.length-1;i++){
             for(int j=i+1;j<nums.length;j++){
                 if(nums[i]+nums[j]==target){
                     returnArray[0]=i;
                     returnArray[1]=j;
-                    break;
+                    return returnArray;
                 }
             }
         }
         return returnArray;
-    }
+    }  
 }
