@@ -11,8 +11,6 @@ Note: In the string, each word is separated by single space and there will not b
 
  */
 
-
-
 package pers.you.learning.leetcode.seventeenfive;
 
 import org.junit.Test;
