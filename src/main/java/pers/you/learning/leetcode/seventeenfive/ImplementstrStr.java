@@ -16,7 +16,7 @@ public class ImplementstrStr {
         return haystack.indexOf(needle);
     }
     
-    //【极客学院版】实现细节清晰,非考察Api的调用，但TLE。
+    //【极客学院版】实现细节清晰,非考察Api的调用.
     public int strStrV2(String haystack, String needle){
             int m = haystack.length();
             int n = needle.length();
