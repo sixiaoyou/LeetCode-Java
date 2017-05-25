@@ -13,10 +13,6 @@ Try to do this in one pass.
  */
 
 
-
-
-
-
 package pers.you.learning.leetcode.seventeenfive;
 
 import org.junit.Test;
