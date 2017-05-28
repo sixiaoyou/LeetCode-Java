@@ -17,21 +17,25 @@ package pers.you.learning.leetcode.seventeenfive;
 
 public class PartitionList {
     public ListNode partition(ListNode head, int x) {
-        ListNode left = new ListNode(0);
+        if(head==null||head.next==null){
+            return head;
+        }
+       ListNode left = new ListNode(0);
         ListNode right = new ListNode(0);
         ListNode p1 = left;
         ListNode p2 = right;
         while(head!=null){
             if(head.val<x){
-                p1.next = new ListNode(head.val);
+                p1.next = head;
                 p1 = p1.next;
             }else{
-                p2.next = new ListNode(head.val);
+                p2.next = head;
                 p2 = p2.next;
             }
             head = head.next;
         }
         p1.next =right.next;
+        p2.next = null;
         return left.next;   
     }
     
