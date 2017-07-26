@@ -24,7 +24,32 @@ public class ReverseStringII {
         return sb;
     }
 
-    public String reverseStr(String s, int k) {
+//    【网友实现】:http://bookshadow.com/weblog/2017/03/12/leetcode-reverse-string-ii/
+    public String reverseStrV1(String s, int k) {
+        int size = s.length();
+        double round = Math.ceil(size/(2.0*k));
+        char[] charArray = s.toCharArray();
+        if(k>size){
+            return subReverseStr(charArray,0,size).toString();
+        }
+        for(int i=0;i<(int)round;i++){
+               if((i*2*k+k)>size){
+                 subReverseStr(charArray,i*2*k,size);
+                 return sb.toString();
+               }
+                subReverseStr(charArray,i*2*k,i*2*k+k);
+                   if((i+1)*2*k<=size){
+                sb.append(s.substring(i*2*k+k,(i+1)*2*k));
+            }else{
+                sb.append(s.substring(i*2*k+k,size));
+            }   
+            
+        }
+                return sb.toString();
+    }
+    
+    
+    public String reverseStrV2(String s, int k) {
         int size = s.length();
         char[] charArray = s.toCharArray();
         if(k==1){
