@@ -26,7 +26,38 @@ Output: False
 
 public class StudentAttendanceRecordI {
     public class Solution {
-        public boolean checkRecord(String s) {
+        public boolean checkRecordV1(String s) {
+            int countA = 0;
+            int countL = 0;
+            int index = -1;
+            char[] charS = s.toCharArray();
+            for(int i = 0; i<charS.length;i++){
+                if(charS[i]=='A'){
+                    countA+=1;
+                }
+                if(countA>1){
+                    return false;
+                }
+                if(charS[i]=='L'){
+                    if(index==-1){
+                        index = i;
+                    }else if(i-index==1){
+                            countL+=1;
+                            index = i;
+                        }else{
+                        index = i;
+                        countL = 0;
+                        }
+                    } 
+                if(countL>1){
+                    return false;
+                    }     
+                }
+            return true;
+            }       
+        
+        
+        public boolean checkRecordV2(String s) {
             int count = 0;
             char[] charS = s.toCharArray();
             for(Character c:charS){
