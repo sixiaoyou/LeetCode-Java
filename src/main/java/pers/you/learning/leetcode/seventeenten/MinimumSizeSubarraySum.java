@@ -11,7 +11,30 @@ the subarray [4,3] has the minimal length under the problem constraint.
  */
 
 public class MinimumSizeSubarraySum {
-    public int minSubArrayLen(int s, int[] nums) {
+//    网友实现
+    public int minSubArrayLenV1(int s, int[] nums) {
+        int start = 0,sum = 0,length = nums.length+1;
+        for(int i = 0 ;i<nums.length;i++){
+            sum+=nums[i];
+            while(sum>=s){
+                int size = i - start + 1;
+                if(length>size){
+                    length = size;
+                }
+                sum-=nums[start];
+                start+=1;
+            }
+        }
+        if(length == nums.length+1){
+            return 0;
+        }else{
+            return length;
+        }   
+    }
+    
+    
+    
+    public int minSubArrayLenV2(int s, int[] nums) {
         int ln = nums.length;
         if (ln == 0) {
             return 0;
