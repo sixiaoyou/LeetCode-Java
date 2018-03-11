@@ -1,4 +1,4 @@
-package pers.you.learning.leetcode.eighteenone;
+package pers.you.learning.leetcode.eighteen;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package pers.you.learning.leetcode.eighteenone;
+package pers.you.learning.leetcode.eighteen;
 
 /*
  【网友实现】:https://segmentfault.com/a/1190000003802755
