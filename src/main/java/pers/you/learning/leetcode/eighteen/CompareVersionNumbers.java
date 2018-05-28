@@ -2,7 +2,6 @@ package pers.you.learning.leetcode.eighteen;
 
 /*
 '''
-【Python3代码不变，故可参考此Python2代码】
 LeetCode165. Compare Version Numbers
 Compare two version numbers version1 and version2.
 If version1 > version2 return 1; if version1 < version2 return -1;otherwise return 0.
