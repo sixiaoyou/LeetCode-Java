@@ -1,5 +1,7 @@
 package pers.you.learning.leetcode.eighteen;
 
+
+//test
 public class MergeStringsAlternately {
 	 public String mergeAlternately(String word1, String word2) {
 			StringBuilder sb = new StringBuilder();
