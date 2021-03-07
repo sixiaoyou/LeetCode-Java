@@ -3,7 +3,7 @@ package pers.you.learning.leetcode.eighteen;
 /**
  * Description
  *	输出n以内所有的素数。	
- *	保证 n 是100以内的整数
+ *	保证 n 是100以内的整数.
  * 
  */
 
