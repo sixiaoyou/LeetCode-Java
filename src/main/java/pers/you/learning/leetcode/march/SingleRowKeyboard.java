@@ -45,6 +45,7 @@ word[i] 是一个小写英文字母
 链接：https://leetcode-cn.com/problems/single-row-keyboard
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
 public class SingleRowKeyboard {
 
 	String keyboard = "pqrstuvwxyzabcdefghijklmno";
