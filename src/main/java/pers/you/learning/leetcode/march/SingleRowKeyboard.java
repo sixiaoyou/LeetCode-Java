@@ -84,6 +84,7 @@ public class SingleRowKeyboard {
 	@Test
 	public void test(){
 		System.out.println(calculateTime2(keyboard, word));
+		System.out.println(3/2);
 	}
 	
 	
