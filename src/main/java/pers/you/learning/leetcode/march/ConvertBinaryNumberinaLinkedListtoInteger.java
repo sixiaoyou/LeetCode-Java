@@ -50,6 +50,7 @@ LeetCode 1290. 二进制链表转整数
 链接：https://leetcode-cn.com/problems/convert-binary-number-in-a-linked-list-to-integer
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
 public class ConvertBinaryNumberinaLinkedListtoInteger {
     public int getDecimalValue(ListNode head) {
         List<String> list = new ArrayList<String>();
