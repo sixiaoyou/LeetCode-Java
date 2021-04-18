@@ -48,7 +48,6 @@ startTime.length == endTime.length
 链接：https://leetcode-cn.com/problems/number-of-students-doing-homework-at-a-given-time
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
 public class NumberofStudentsDoingHomeworkataGivenTime {
     public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
         int count = 0;
