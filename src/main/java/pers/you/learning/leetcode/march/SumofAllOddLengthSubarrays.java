@@ -48,9 +48,6 @@ LeetCode 1588. 所有奇数长度子数组的和
 链接：https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-
-
 public class SumofAllOddLengthSubarrays {
     public int sum(int start,int end,int[] arr){
         int sum = 0;
