@@ -45,7 +45,6 @@ arr[i] > arr[i+1] > ... > arr[arr.length - 1]
 链接：https://leetcode-cn.com/problems/peak-index-in-a-mountain-array
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
 public class PeakIndexinaMountainArray {
     public int peakIndexInMountainArray(int[] arr) {
         for(int i=0;i<arr.length;i++){
