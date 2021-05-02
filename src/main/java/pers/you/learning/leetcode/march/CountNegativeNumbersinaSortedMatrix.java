@@ -41,7 +41,6 @@ n == grid[i].length
 链接：https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
 public class CountNegativeNumbersinaSortedMatrix {
 	 public int countNegatives(int[][] grid) {
 	        int cnt = 0;
