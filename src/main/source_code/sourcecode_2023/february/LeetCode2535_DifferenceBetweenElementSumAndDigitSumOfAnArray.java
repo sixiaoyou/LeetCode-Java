@@ -1,11 +1,3 @@
-package year_2023.February;
-
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.internal.Constants;
-
 /*
 【LeetCode2535. Difference Between Element Sum and Digit Sum of an Array】
 
@@ -43,6 +35,8 @@ Constraints:
 1 <= nums[i] <= 2000
  */
 
+package sourcecode_2023.february;
+
 
 public class LeetCode2535_DifferenceBetweenElementSumAndDigitSumOfAnArray {
     /**
@@ -53,39 +47,9 @@ public class LeetCode2535_DifferenceBetweenElementSumAndDigitSumOfAnArray {
      * @Version: 1.0
      */
 
-    final boolean TRUE_RESULT = true;
-
-    /**
-     * @BeforeClass 方法 为类初始化方法
-     * 属于模块公共方法，用于编写模块公共初始化代码
-     * 除特殊情况外，一定要标注 alwaysRun = true
-     */
-
-    @BeforeClass(alwaysRun = true)
-    public void class_setup(){
-        System.out.println("Initialize test...");
-    }
-
-    /**
-     * @AfterClass 方法 为类清除方法
-     * 属于模块公共方法，用于编写模块公共清理代码
-     * 除特殊情况外，一定要标注 alwaysRun = true
-     */
-    @AfterClass(alwaysRun = true)
-    public void class_teardown(){
-        System.out.println("Clear test...");
-    }
-
-
-    @Test(description = "assertEqualsTest")
-    public void assertEqualsTest(){
-        int[] nums = {1, 15, 6, 3};
-        Assert.assertEquals(differenceOfSum(nums), 9);
-    }
-
-    public int getSum(int[] nums){
+    public int getSum(int[] nums) {
         int sum = 0;
-        for(Integer j: nums){
+        for (Integer j : nums) {
             sum += j;
         }
         return sum;
@@ -97,7 +61,7 @@ public class LeetCode2535_DifferenceBetweenElementSumAndDigitSumOfAnArray {
 
             while (i >= 10) {
                 sum += i % 10;
-                i = Math.floorDiv(i ,10);
+                i = Math.floorDiv(i, 10);
             }
             sum += i;
 
