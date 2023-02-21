@@ -2,6 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import sourcecode_2023.february.LeetCode2037_MinimumNumberOfMovesToSeatEveryone;
 import sourcecode_2023.february.LeetCode2520_CountTheDigitsThatDivideANumber;
 
 /*
@@ -10,7 +11,7 @@ Test source_code/SourceCode_2023/February/LeetCode2520_CountTheDigitsThatDivideA
  */
 
 
-public class Test_LeetCode extends LeetCode2520_CountTheDigitsThatDivideANumber {
+public class Test_LeetCode extends LeetCode2037_MinimumNumberOfMovesToSeatEveryone {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: TestCase
@@ -44,8 +45,9 @@ public class Test_LeetCode extends LeetCode2520_CountTheDigitsThatDivideANumber 
 
     @Test(description = "assertEqualsTest")
     public void assertEqualsTest() {
-        int num = 121;
-        Assert.assertEquals(countDigitsV1(num), 2);
-        Assert.assertEquals(countDigitsV2(num), 2);
+        int[] a = {12, 14, 19, 19, 12};
+        int[] b = {19, 2, 17, 20, 7};
+
+        Assert.assertEquals(minMovesToSeat(a, b), 19);
     }
 }

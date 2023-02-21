@@ -7,4 +7,8 @@ public class Tmp {
  * @Version: 1.0
  */
 
+    public void test(){
+
+    }
+
 }
