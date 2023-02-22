@@ -1,17 +1,17 @@
+/*
+Note:
+Test source_code/SourceCode_2023/February/LeetCode2553_SeparateTheDigitsInAnArray
+ */
+
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import sourcecode_2023.february.LeetCode2037_MinimumNumberOfMovesToSeatEveryone;
-import sourcecode_2023.february.LeetCode2520_CountTheDigitsThatDivideANumber;
-
-/*
-Note:
-Test source_code/SourceCode_2023/February/LeetCode2520_CountTheDigitsThatDivideANumber
- */
+import sourcecode_2023.february.LeetCode2553_SeparateTheDigitsInAnArray;
 
 
-public class Test_LeetCode extends LeetCode2037_MinimumNumberOfMovesToSeatEveryone {
+public class Test_LeetCode extends LeetCode2553_SeparateTheDigitsInAnArray {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: TestCase
@@ -45,9 +45,12 @@ public class Test_LeetCode extends LeetCode2037_MinimumNumberOfMovesToSeatEveryo
 
     @Test(description = "assertEqualsTest")
     public void assertEqualsTest() {
-        int[] a = {12, 14, 19, 19, 12};
-        int[] b = {19, 2, 17, 20, 7};
-
-        Assert.assertEquals(minMovesToSeat(a, b), 19);
+        int[] nums1 = {13, 25, 83, 77};
+        int[] nums2 = {13, 25, 83, 77};
+        int[] nums3 = {13, 25, 83, 77};
+        int[] res = {1, 3, 2, 5, 8, 3, 7, 7};
+        Assert.assertEquals(separateDigitsV1(nums1), res);
+        Assert.assertEquals(separateDigitsV2(nums2), res);
+        Assert.assertEquals(separateDigitsV3(nums3), res);
     }
 }
