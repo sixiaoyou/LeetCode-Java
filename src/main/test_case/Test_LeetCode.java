@@ -1,6 +1,6 @@
 /*
 Note:
-Test source_code/SourceCode_2023/February/LeetCode2553_SeparateTheDigitsInAnArray
+Test source_code/SourceCode_2023/February/LeetCode2500_DeleteGreatestValueInEachRow
  */
 
 
@@ -8,10 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import sourcecode_2023.february.LeetCode2553_SeparateTheDigitsInAnArray;
+import sourcecode_2023.february.LeetCode2500_DeleteGreatestValueInEachRow;
 
 
-public class Test_LeetCode extends LeetCode2553_SeparateTheDigitsInAnArray {
+public class Test_LeetCode extends LeetCode2500_DeleteGreatestValueInEachRow {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: TestCase
@@ -45,12 +45,7 @@ public class Test_LeetCode extends LeetCode2553_SeparateTheDigitsInAnArray {
 
     @Test(description = "assertEqualsTest")
     public void assertEqualsTest() {
-        int[] nums1 = {13, 25, 83, 77};
-        int[] nums2 = {13, 25, 83, 77};
-        int[] nums3 = {13, 25, 83, 77};
-        int[] res = {1, 3, 2, 5, 8, 3, 7, 7};
-        Assert.assertEquals(separateDigitsV1(nums1), res);
-        Assert.assertEquals(separateDigitsV2(nums2), res);
-        Assert.assertEquals(separateDigitsV3(nums3), res);
+        int[][] grid = {{1, 2, 4}, {3, 3, 1}};
+        Assert.assertEquals(deleteGreatestValue(grid), 8);
     }
 }
