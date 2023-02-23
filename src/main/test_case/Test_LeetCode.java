@@ -1,6 +1,6 @@
 /*
 Note:
-Test source_code/SourceCode_2023/February/LeetCode2500_DeleteGreatestValueInEachRow
+Test source_code/SourceCode_2023/February/LeetCode2220_MinimumBitFlipsToConvertNumber
  */
 
 
@@ -8,10 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import sourcecode_2023.february.LeetCode2500_DeleteGreatestValueInEachRow;
+import sourcecode_2023.february.LeetCode2220_MinimumBitFlipsToConvertNumber;
 
 
-public class Test_LeetCode extends LeetCode2500_DeleteGreatestValueInEachRow {
+public class Test_LeetCode extends LeetCode2220_MinimumBitFlipsToConvertNumber {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: TestCase
@@ -45,7 +45,7 @@ public class Test_LeetCode extends LeetCode2500_DeleteGreatestValueInEachRow {
 
     @Test(description = "assertEqualsTest")
     public void assertEqualsTest() {
-        int[][] grid = {{1, 2, 4}, {3, 3, 1}};
-        Assert.assertEquals(deleteGreatestValue(grid), 8);
+        Assert.assertEquals(minBitFlipsV1(10, 7), 3);
+        Assert.assertEquals(minBitFlipsV2(10, 7), 3);
     }
 }
