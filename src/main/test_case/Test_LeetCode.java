@@ -1,6 +1,6 @@
 /*
 Note:
-Test source_code/SourceCode_2023/February/LeetCode2220_MinimumBitFlipsToConvertNumber
+Test source_code/SourceCode_2023/February/LeetCode2485_FindThePivotInteger
  */
 
 
@@ -8,10 +8,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import sourcecode_2023.february.LeetCode2220_MinimumBitFlipsToConvertNumber;
+import sourcecode_2023.february.LeetCode2485_FindThePivotInteger;
 
 
-public class Test_LeetCode extends LeetCode2220_MinimumBitFlipsToConvertNumber {
+public class Test_LeetCode extends LeetCode2485_FindThePivotInteger {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: TestCase
@@ -45,7 +45,8 @@ public class Test_LeetCode extends LeetCode2220_MinimumBitFlipsToConvertNumber {
 
     @Test(description = "assertEqualsTest")
     public void assertEqualsTest() {
-        Assert.assertEquals(minBitFlipsV1(10, 7), 3);
-        Assert.assertEquals(minBitFlipsV2(10, 7), 3);
+        Assert.assertEquals(pivotIntegerV1(49), 35);
+        Assert.assertEquals(pivotIntegerV2(49), 35);
+        Assert.assertEquals(pivotIntegerV3(49), 35);
     }
 }
