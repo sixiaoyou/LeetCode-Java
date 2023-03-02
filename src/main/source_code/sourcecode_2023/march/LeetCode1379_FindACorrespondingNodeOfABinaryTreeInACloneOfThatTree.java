@@ -47,8 +47,6 @@ public class LeetCode1379_FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree 
      * @Version: 1.0
      */
 
-import javax.swing.tree.TreeNode;
-
     /**
      * Definition for a binary tree node.
      * public class TreeNode {
