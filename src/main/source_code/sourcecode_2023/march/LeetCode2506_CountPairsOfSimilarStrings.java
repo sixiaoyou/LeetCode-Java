@@ -40,11 +40,11 @@ words[i] consist of only lowercase English letters.
  */
 
 
-package sourcecode_2023.march.LeetCode2506_CountPairsOfSimilarStrings;
+package sourcecode_2023.march;
 
 import java.util.*;
 
-public class py {
+public class LeetCode2506_CountPairsOfSimilarStrings {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: sourcecode_2023.march.LeetCode2506_CountPairsOfSimilarStrings
@@ -110,16 +110,16 @@ public class py {
         public int similarPairs(String[] words) {
             Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-            for(String word: words){
+            for (String word : words) {
                 int count = 0;
-                for(char c: word.toCharArray()){
-                    count |= 1 << ( c - 'a' );
+                for (char c : word.toCharArray()) {
+                    count |= 1 << (c - 'a');
                 }
                 map.put(count, map.getOrDefault(count, 0) + 1);
             }
 
             int res = 0;
-            for(int i: map.values()){
+            for (int i : map.values()) {
                 res += i * (i - 1) / 2;
             }
 
