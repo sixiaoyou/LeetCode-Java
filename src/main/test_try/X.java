@@ -80,6 +80,8 @@ public class X{
         int cols = 3;
         int rCenter = 1;
         int cCenter = 2;
+        String s = "aaa";
+        s.s
         X l = new X();
         int[][] la =  l.allCellsDistOrder(rows, cols, rCenter, cCenter);
     }
