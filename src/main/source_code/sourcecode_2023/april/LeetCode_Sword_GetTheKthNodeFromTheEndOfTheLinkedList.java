@@ -47,6 +47,4 @@ public class LeetCode_Sword_GetTheKthNodeFromTheEndOfTheLinkedList {
         }
     }
 
-
-
 }

@@ -33,12 +33,15 @@ Constraints:
 0 <= cCenter < cols
  */
 
+
+package sourcecode_2023.may;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class X{
+public class LeetCode1030_MatrixCellsInDistanceOrder {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: sourcecode_2023.may
@@ -61,27 +64,19 @@ public class X{
 
         }
 
+
         List<int[]> lres = new ArrayList<int[]>();
-        for(List<int[]> lv: map.values()){
-            for(int[] av: lv){
+        for (List<int[]> lv : map.values()) {
+            for (int[] av : lv) {
                 lres.add(av);
             }
         }
 
         int[][] res = new int[lres.size()][2];
-        for(int j = 0; j < lres.size(); j++){
+        for (int j = 0; j < lres.size(); j++) {
             res[j] = lres.get(j);
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        int rows = 2;
-        int cols = 3;
-        int rCenter = 1;
-        int cCenter = 2;
-        X l = new X();
-        int[][] la =  l.allCellsDistOrder(rows, cols, rCenter, cCenter);
     }
 
 }
