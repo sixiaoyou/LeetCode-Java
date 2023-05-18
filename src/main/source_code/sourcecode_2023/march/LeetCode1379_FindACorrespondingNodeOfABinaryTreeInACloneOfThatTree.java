@@ -36,8 +36,6 @@ Follow up: Could you solve the problem if repeated values on the tree are allowe
 
 package sourcecode_2023.march;
 
-import javax.swing.tree.TreeNode;
-
 public class LeetCode1379_FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree {
     /**
      * @BelongsProject: LeetCode-Java
@@ -47,15 +45,16 @@ public class LeetCode1379_FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree 
      * @Version: 1.0
      */
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     * int val;
-     * TreeNode left;
-     * TreeNode right;
-     * TreeNode(int x) { val = x; }
-     * }
-     */
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
 
     class Solution {
 

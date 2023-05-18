@@ -30,7 +30,6 @@ The number of nodes in the tree is in the range [1, 1000].
 
 package sourcecode_2023.march;
 
-import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,35 +42,40 @@ public class LeetCode1469_FindAllTheLonelyNodes {
      * @Version: 1.0
      */
 
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode() {}
-     *     TreeNode(int val) { this.val = val; }
-     *     TreeNode(int val, TreeNode left, TreeNode right) {
-     *         this.val = val;
-     *         this.left = left;
-     *         this.right = right;
-     *     }
-     * }
-     */
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     class Solution {
 
         List<Integer> res = new ArrayList<Integer>();
+
         public List<Integer> getLonelyNodes(TreeNode root) {
 
-            if(root == null){
+            if (root == null) {
                 return null;
             }
 
-            if(root.right != null && root.left == null){
+            if (root.right != null && root.left == null) {
                 res.add(root.right.val);
             }
 
-            if(root.left != null && root.right == null){
+            if (root.left != null && root.right == null) {
                 res.add(root.left.val);
             }
 

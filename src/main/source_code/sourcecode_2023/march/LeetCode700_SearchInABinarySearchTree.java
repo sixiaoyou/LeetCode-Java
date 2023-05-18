@@ -14,8 +14,6 @@ Output: []
 
 package sourcecode_2023.march;
 
-import javax.swing.tree.TreeNode;
-
 public class LeetCode700_SearchInABinarySearchTree {
     /**
      * @BelongsProject: LeetCode-Java
@@ -25,23 +23,20 @@ public class LeetCode700_SearchInABinarySearchTree {
      * @Version: 1.0
      */
 
-
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode() {}
-     *     TreeNode(int val) { this.val = val; }
-     *     TreeNode(int val, TreeNode left, TreeNode right) {
-     *         this.val = val;
-     *         this.left = left;
-     *         this.right = right;
-     *     }
-     * }
-     */
     class Solution {
+
+        public class TreeNode {
+            int val;
+            TreeNode left;
+            TreeNode right;
+            TreeNode() {}
+            TreeNode(int val) { this.val = val; }
+            TreeNode(int val, TreeNode left, TreeNode right) {
+                this.val = val;
+                this.left = left;
+                this.right = right;
+            }
+        }
 
         TreeNode tmp = null;
 

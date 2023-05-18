@@ -28,8 +28,10 @@ The number of nodes in the tree is in the range [0, 100].
 
 package sourcecode_2023.march;
 
-import javax.swing.tree.TreeNode;
 import java.util.Stack;
+
+
+
 
 public class LeetCode226_InvertBinaryTree {
     /**
@@ -40,6 +42,18 @@ public class LeetCode226_InvertBinaryTree {
      * @Version: 1.0
      */
 
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
     public TreeNode invertTreeV1(TreeNode root) {
 
         if(root == null){
@@ -76,8 +90,8 @@ public class LeetCode226_InvertBinaryTree {
             return null;
         }
 
-        invertTree(root.left);
-        invertTree(root.right);
+        invertTreeV2(root.left);
+        invertTreeV2(root.right);
         TreeNode tmp = root.left;
         root.left = root.right;
         root.right = tmp;

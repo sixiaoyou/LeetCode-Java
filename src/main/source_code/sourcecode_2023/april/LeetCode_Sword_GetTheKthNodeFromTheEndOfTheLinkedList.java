@@ -25,7 +25,7 @@ public class LeetCode_Sword_GetTheKthNodeFromTheEndOfTheLinkedList {
      * @Author: Sixiaoyou
      * @Version: 1.0
      */
-    /**
+    /*
      * Definition for singly-linked list.
      * public class ListNode {
      *     int val;
@@ -33,13 +33,25 @@ public class LeetCode_Sword_GetTheKthNodeFromTheEndOfTheLinkedList {
      *     ListNode(int x) { val = x; }
      * }
      */
+
+
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     class Solution {
         public ListNode getKthFromEnd(ListNode head, int k) {
             ListNode slow = head, fast = head;
-            for(int i = 0; i < k; i++){
+            for (int i = 0; i < k; i++) {
                 fast = fast.next;
             }
-            while(fast != null){
+            while (fast != null) {
                 fast = fast.next;
                 slow = slow.next;
             }

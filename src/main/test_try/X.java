@@ -76,14 +76,7 @@ public class X{
     }
 
     public static void main(String[] args) {
-        int rows = 2;
-        int cols = 3;
-        int rCenter = 1;
-        int cCenter = 2;
-        String s = "aaa";
-        s.s
-        X l = new X();
-        int[][] la =  l.allCellsDistOrder(rows, cols, rCenter, cCenter);
+        System.out.println("test");
     }
 
 }
