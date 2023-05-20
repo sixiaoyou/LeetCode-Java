@@ -33,11 +33,6 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class X{
     /**
      * @BelongsProject: LeetCode-Java
@@ -46,37 +41,10 @@ public class X{
      * @Author: Sixiaoyou
      * @Version: 1.0
      */
-    public int[][] allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {
-        Map<Integer, List<int[]>> map = new HashMap<Integer, List<int[]>>();
-        int ml = Math.max(rCenter, rows - 1 - rCenter) + Math.max(cCenter, cols - 1 - cCenter);
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                int key = Math.abs(i - rCenter) + Math.abs(j - cCenter);
-                int[] value = new int[]{i, j};
-                List<int[]> l = map.getOrDefault(key, new ArrayList<>());
-                l.add(value);
-                map.put(key, l);
-            }
-
-        }
-
-        List<int[]> lres = new ArrayList<int[]>();
-        for(List<int[]> lv: map.values()){
-            for(int[] av: lv){
-                lres.add(av);
-            }
-        }
-
-        int[][] res = new int[lres.size()][2];
-        for(int j = 0; j < lres.size(); j++){
-            res[j] = lres.get(j);
-        }
-        return res;
-    }
 
     public static void main(String[] args) {
-        System.out.println("test");
+        System.out.println("a".in);
     }
 
 }
