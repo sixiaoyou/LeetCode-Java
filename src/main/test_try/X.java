@@ -33,7 +33,7 @@ Constraints:
 0 <= cCenter < cols
  */
 
-public class X{
+public class X {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: sourcecode_2023.may
@@ -44,7 +44,10 @@ public class X{
 
 
     public static void main(String[] args) {
-        System.out.println("a".in);
+
+            System.out.println(5 / 10);
+
+
     }
 
 }
