@@ -45,7 +45,7 @@ public class LeetCode2399_CheckDistancesBetweenSameLetters {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: sourcecode_2023.may
-     * @CreateTime: 2023/5/28
+     * @CreateTime: 2023/6/1
      * @Author: Sixiaoyou
      * @Version: 1.0
      */
