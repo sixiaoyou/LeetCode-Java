@@ -47,7 +47,7 @@ public class LeetCode2399_CheckDistancesBetweenSameLetters {
      * @BelongsPackage: sourcecode_2023.may
      * @CreateTime: 2054/6/1
      * @Author: Sixiaoyou
-     * @Version: 1.0
+     * @Version: 4.0
      */
     class Solution {
         public boolean checkDistances(String s, int[] distance) {
