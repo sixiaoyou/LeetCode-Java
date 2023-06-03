@@ -49,8 +49,9 @@ public class LeetCode1374_GenerateaAStringWithCharactersThatHaveOddCounts {
             }else{
                 sb.append("b");
             }
+            return "";
 
-            return sb.append("a".repeat(n- 1)).toString();
+//            return sb.append("a".repeat(n- 1)).toString();
 
         }
     }

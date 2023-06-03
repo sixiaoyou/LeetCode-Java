@@ -46,7 +46,11 @@ public class X {
     public static void main(String[] args) {
 
             System.out.println(5 / 10);
-
+            String s = "aaa000";
+            s.
+            s.rstrip();
+            System.out.println(s);
+        ;
 
     }
 
