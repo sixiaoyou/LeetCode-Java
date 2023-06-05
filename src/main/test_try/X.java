@@ -33,6 +33,11 @@ Constraints:
 0 <= cCenter < cols
  */
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class X {
     /**
      * @BelongsProject: LeetCode-Java
@@ -44,13 +49,29 @@ public class X {
 
 
     public static void main(String[] args) {
+        int[][] array = {{0,2},{2,1},{3,4},{2,3},{1,4},{2,0},{0,4}};
+        Map<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
 
-            System.out.println(5 / 10);
-            String s = "aaa000";
-            s.
-            s.rstrip();
-            System.out.println(s);
-        ;
+        for(int[] i: array){
+            if(map.get(i[0]) == null){
+                List<Integer> l = new ArrayList<Integer>();
+                l.add(i[1]);
+                map.put(i[0], l);
+            }else{
+                List<Integer> l = map.get(i[0]);
+                l.add(i[1]);
+                map.put(i[0], l);
+            }
+
+        }
+
+        for(Map.Entry<Integer, List<Integer>> entry: map.entrySet()){
+            System.out.println(entry);
+
+        }
+
+
+
 
     }
 

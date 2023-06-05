@@ -26,8 +26,8 @@ num doesn't have any leading zeros.
  */
 
 
-
-
+import java.util.HashMap;
+import java.util.Map;
 
 public class LeetCode2710_RemoveTrailingZerosFromAString {
     /**
@@ -49,6 +49,9 @@ public class LeetCode2710_RemoveTrailingZerosFromAString {
                 }
 
             }
+
+            Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+            
             return num.substring(0,res + 1);
         }
     }
