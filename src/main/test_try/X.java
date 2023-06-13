@@ -33,7 +33,8 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class X {
     /**
@@ -46,8 +47,12 @@ public class X {
 
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3};
-        System.out.println(Arrays.asList(a).contains(1));
+        int[] a = {1, 2, 1};
+        Set<Integer> set = new HashSet<Integer>();
+        set.add(1);
+
+        System.out.println(set.add(1));
+
     }
 }
 
