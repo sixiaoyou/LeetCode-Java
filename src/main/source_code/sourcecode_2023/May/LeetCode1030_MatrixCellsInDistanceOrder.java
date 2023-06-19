@@ -33,9 +33,15 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.PriorityQueue;
 
-public class X {
+package sourcecode_2023.May;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class LeetCode1030_MatrixCellsInDistanceOrder {
     /**
      * @BelongsProject: LeetCode-Java
      * @BelongsPackage: sourcecode_2023.may
@@ -43,14 +49,35 @@ public class X {
      * @Author: Sixiaoyou
      * @Version: 1.0
      */
+    public int[][] allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {
+        Map<Integer, List<int[]>> map = new HashMap<Integer, List<int[]>>();
+        int ml = Math.max(rCenter, rows - 1 - rCenter) + Math.max(cCenter, cols - 1 - cCenter);
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                int key = Math.abs(i - rCenter) + Math.abs(j - cCenter);
+                int[] value = new int[]{i, j};
+                List<int[]> l = map.getOrDefault(key, new ArrayList<>());
+                l.add(value);
+                map.put(key, l);
+            }
+
+        }
 
 
-    public static void main(String[] args) {
-        PriorityQueue<int[]> p = new PriorityQueue<int[]>();
-        int[] a1 = {0, 1};
-        int[] a2 = {1, 0};
+        List<int[]> lres = new ArrayList<int[]>();
+        for (List<int[]> lv : map.values()) {
+            for (int[] av : lv) {
+                lres.add(av);
+            }
+        }
 
-
+        int[][] res = new int[lres.size()][2];
+        for (int j = 0; j < lres.size(); j++) {
+            res[j] = lres.get(j);
+        }
+        return res;
     }
+
 }
 
