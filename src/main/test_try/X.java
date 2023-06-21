@@ -33,7 +33,7 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class X {
     /**
@@ -45,12 +45,8 @@ public class X {
      */
 
 
-    public static void main(String[] args) {
-        PriorityQueue<int[]> p = new PriorityQueue<int[]>();
-        int[] a1 = {0, 1};
-        int[] a2 = {1, 0};
 
 
-    }
 }
+
 
