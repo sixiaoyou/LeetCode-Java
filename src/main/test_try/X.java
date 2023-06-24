@@ -43,6 +43,7 @@ public class X {
      * @Author: Sixiaoyou
      * @Version: 1.0
      */
+    int a = Integer.toBinaryString()
 
 
 
