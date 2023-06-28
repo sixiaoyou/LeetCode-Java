@@ -44,8 +44,12 @@ public class X {
      * @Version: 1.0
      */
     public static void main(String[] args) {
-        List<Integer> l = new ArrayList<Integer>();
-
+        List<String> l = new ArrayList<String>();
+        l.add("test");
+        System.out.println(l.contains("test"));
+        String s = "test";
+        StringBuilder t = new StringBuilder(s);
+        System.out.println(t.reverse().toString());
 
 
     }
