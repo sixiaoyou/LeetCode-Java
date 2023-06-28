@@ -43,7 +43,13 @@ public class X {
      * @Author: Sixiaoyou
      * @Version: 1.0
      */
-    int a = Integer.toBinaryString()
+    public static void main(String[] args) {
+        List<Integer> l = new ArrayList<Integer>();
+
+
+
+    }
+
 
 
 
