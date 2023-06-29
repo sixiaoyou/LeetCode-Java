@@ -33,7 +33,7 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.*;
+import java.util.TreeMap;
 
 public class X {
     /**
@@ -44,13 +44,16 @@ public class X {
      * @Version: 1.0
      */
     public static void main(String[] args) {
-        List<String> l = new ArrayList<String>();
-        l.add("test");
-        System.out.println(l.contains("test"));
-        String s = "test";
-        StringBuilder t = new StringBuilder(s);
-        System.out.println(t.reverse().toString());
+        TreeMap<Integer, Integer> tmap = new TreeMap<Integer, Integer>();
+        tmap.put(1, 5);
+        tmap.put(0, 4);
+        tmap.put(3, 3);
+        tmap.put(4, 2);
+        tmap.put(5, 1);
 
+        for(Integer i: tmap.values()){
+            System.out.println(i);
+        }
 
     }
 
