@@ -33,7 +33,9 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.TreeMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class X {
     /**
@@ -44,21 +46,16 @@ public class X {
      * @Version: 1.0
      */
     public static void main(String[] args) {
-        TreeMap<Integer, Integer> tmap = new TreeMap<Integer, Integer>();
-        tmap.put(1, 5);
-        tmap.put(0, 4);
-        tmap.put(3, 3);
-        tmap.put(4, 2);
-        tmap.put(5, 1);
-
-        for(Integer i: tmap.values()){
-            System.out.println(i);
+        Set<String> set = new HashSet<String>();
+        set.add("1");
+        Iterator<String> it = set.iterator();
+        while (it.hasNext()) {
+            String s = it.next();
+            System.out.println(s);
         }
 
+
     }
-
-
-
 
 
 }
