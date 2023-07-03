@@ -33,10 +33,6 @@ Constraints:
 0 <= cCenter < cols
  */
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-
 public class X {
     /**
      * @BelongsProject: LeetCode-Java
@@ -46,14 +42,10 @@ public class X {
      * @Version: 1.0
      */
     public static void main(String[] args) {
-        Set<String> set = new HashSet<String>();
-        set.add("1");
-        Iterator<String> it = set.iterator();
-        while (it.hasNext()) {
-            String s = it.next();
-            System.out.println(s);
-        }
-
+       String s = "aabc";
+       System.out.println(s.contains(String.valueOf('a')));
+       String res = s.replaceFirst("a","1");
+       System.out.println(res);
 
     }
 
