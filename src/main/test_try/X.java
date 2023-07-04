@@ -42,10 +42,8 @@ public class X {
      * @Version: 1.0
      */
     public static void main(String[] args) {
-       String s = "aabc";
-       System.out.println(s.contains(String.valueOf('a')));
-       String res = s.replaceFirst("a","1");
-       System.out.println(res);
+        int[] array = new int[1];
+        System.out.println(array[0]);
 
     }
 
