@@ -42,7 +42,6 @@ public class SwordFingerOffer206_ReverseLinkedList {
             head.next.next = head;
             head.next = null;
             return rhead;
-
         }
     }
 }
